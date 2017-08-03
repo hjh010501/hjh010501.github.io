@@ -14,7 +14,7 @@ html, body {
     background-size:cover;
 }
 
-@media  (min-width: 600px) {
+@media  (max-width: 600px) {
     .kidevelop {
         background-size: 100%;
     }
