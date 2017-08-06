@@ -1,3 +1,3 @@
 # kidevelop.io
-[link]http://kidevelop.io
+http://kidevelop.io
 kidevelop's website
