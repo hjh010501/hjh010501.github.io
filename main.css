@@ -67,11 +67,10 @@ html, body {
 }
 
 .scrolltitle {
-
-    float: left;
-    width: 100%;
-    text-align: center;
-    margin-top: 500px;
+    position: absolute;
+    left: 50%;
+    top: calc(100% - 300px);
+    margin-left: -66px;
 }
 
 @media  (max-width: 600px) {
