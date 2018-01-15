@@ -62,15 +62,16 @@ html, body {
 .subtext {
     font-family: 'Noto Sans KR Bold';
     font-size: 18pt;
-    color: #d6d6d6;
-    letter-spacing: 5;
+    color: #171717;
 }
 
 .scrolltitle {
     position: absolute;
     left: 50%;
     top: calc(100% - 300px);
-    margin-left: -66px;
+    margin-left: -46px;
+    color: #d6d6d6;
+    letter-spacing: 5;
 }
 
 @media  (max-width: 600px) {
