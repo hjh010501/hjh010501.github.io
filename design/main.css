@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+ }
+
+@font-face {
+   font-family: 'Noto Sans KR Light';
+   font-style: normal;
+   font-weight: 100;
+   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+ }
+ 
+ @font-face {
+   font-family: 'Noto Sans KR Bold';
+   font-style: normal;
+   font-weight: 600;
+   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+ }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body::-webkit-scrollbar-track
+{
+	background-color: white;
+}
+
+body::-webkit-scrollbar
+{
+	width: 25px;
+	background-color: white;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: #2f2f45;
+}
+
+
+.kidevelop {
+    width: 50%;
+    height: 100px;
+    background-image: url(kidevelop_mainimage.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: calc(-50% / 2);
+    margin-top: -50px;
+}
+
+
+.card {
+
+    width: calc(100% - 300px);
+    height: calc(100% - 300px);
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom:150px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
+    box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
+}
+
+.subtext {
+    font-family: 'Noto Sans KR Bold';
+    font-size: 14pt;
+    color: #171717;
+}
+
+.scrolltitle {
+    position: absolute;
+    left: 50%;
+    top: calc(100% - 300px);
+    margin-left: -51px;
+    color: #d6d6d6;
+    letter-spacing: 5;
+}
+
+@media  (max-width: 600px) {
+    .kidevelop {
+        background-size: 100%;
+    }
+}
