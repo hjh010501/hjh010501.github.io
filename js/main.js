@@ -1,17 +1,14 @@
 // /**
 //  * Created by KID on 2017. 8. 3..
 //  */
+var $window = $(window);
+var window_height = $window.height();
+var scrollvalue;
 
-// window.onload = load;
+$( window ).scroll(function() {
 
-// function load() {
-//     var random = Math.floor(Math.random() * 2);
+    scrollvalue = $window.scrollTop();
+    
+    $('.prograss').css("height", (scrollvalue / window_height * 20) + "%");
 
-//     if(random == 0) {
-//         document.getElementsByClassName('kidevelop')[0].style.backgroundImage = "url(kidevelopio_b.png)";
-//         document.getElementsByTagName('body')[0].style.backgroundColor = "#000000";
-//     } else {
-//         document.getElementsByClassName('kidevelop')[0].style.backgroundImage = "url(kidevelopio.png)";
-//     }
-
-// }
+});

@@ -4,28 +4,34 @@
    font-family: 'Noto Sans KR';
    font-style: normal;
    font-weight: 400;
-   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
-        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
-        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+   src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
  }
 
 @font-face {
    font-family: 'Noto Sans KR Light';
    font-style: normal;
    font-weight: 100;
-   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
-        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
-        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+   src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
+        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
+        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
  }
  
  @font-face {
    font-family: 'Noto Sans KR Bold';
    font-style: normal;
    font-weight: 600;
-   src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
-        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
-        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
+   src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
+        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
+        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
  }
+
+ @font-face {
+    font-family: 'Intro';
+    font-style: normal;
+    src: url(font/Intro.ttf.woff) format('woff');
+  }
 
 html, body {
     margin: 0;
@@ -49,6 +55,23 @@ body::-webkit-scrollbar-thumb
 	background-color: #2f2f45;
 }
 
+.prograss {
+    position: fixed;
+    z-index: -5;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.1);
+    transition: .2s;
+}
+
+
+.pages {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 .kidevelop {
     width: 50%;
@@ -65,22 +88,30 @@ body::-webkit-scrollbar-thumb
 
 
 .card {
-
+    float:left;
+    z-index: 10;
     width: calc(100% - 300px);
     height: calc(100% - 300px);
-    margin: 0 auto;
-    margin-top: 150px;
-    margin-bottom:150px;
+    background-color: #fff;
+    margin: 150px;
     border-radius: 50px;
     -webkit-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
     -moz-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
     box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
 }
 
+.bigtitle {
+    font-family: 'Intro';
+    font-size: 28pt;
+    text-align: center;
+    margin-top: 50px;
+}
+
 .subtext {
     font-family: 'Noto Sans KR Bold';
     font-size: 14pt;
     color: #171717;
+    letter-spacing: -0.2;
 }
 
 .scrolltitle {
@@ -90,6 +121,36 @@ body::-webkit-scrollbar-thumb
     margin-left: -51px;
     color: #d6d6d6;
     letter-spacing: 5;
+}
+
+.profile_image {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(kidevelopio.png);
+    background-position: center;
+    background-size: cover;
+    margin-top: 50px;
+    margin-left: calc(25% - 75px);
+    -webkit-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
+    box-shadow: 0px 11px 35px 1px rgba(0,0,0,0.11);
+}
+
+.ver_line {
+    float: left;
+    width: 2px;
+    height: 150px;
+    margin-left: calc(25% - 75px);
+    margin-top: 50px;
+    background-color: #d6d6d6;
+}
+
+.profile_content {
+    float: left;
+    margin-top: 50px;
+    margin-left: 25px;
 }
 
 @media  (max-width: 600px) {
