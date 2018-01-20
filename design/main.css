@@ -41,6 +41,7 @@ html, body {
 }
 
 .mousecursor {
+    opacity: 0;
     pointer-events: none;
     position: fixed;
     z-index: 9999;
@@ -48,7 +49,7 @@ html, body {
     height: 50px;
     border-radius: 100%;
     transition: .8s;
-    -webkit-transition:left .8s, top .8s;
+    -webkit-transition:left .8s, top .8s, opacity .8s;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-transform: translate3d(0,0,0);
     -webkit-backface-visibility: hidden;
@@ -59,13 +60,14 @@ html, body {
 }
 
 .real_mousecursor {
+    opacity: 0;
     pointer-events: none;
     position: fixed; 
     width: 10px;
     height: 10px;
     border-radius: 100%;
     transition: .2s;
-    -webkit-transition:left .2s, top .2s;
+    -webkit-transition:left .2s, top .2s, opacity .8s;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-transform: translate3d(0,0,0);
     -webkit-backface-visibility: hidden;
