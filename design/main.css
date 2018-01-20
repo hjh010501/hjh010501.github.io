@@ -97,7 +97,7 @@ body::-webkit-scrollbar-thumb
     width: 100%;
     background-color: rgba(0,0,0,.1);
     transition: height .2s;
-    
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-backface-visibility: hidden;
 }
 
@@ -106,6 +106,27 @@ body::-webkit-scrollbar-thumb
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.page_count {
+    width: 50px;
+    height: calc(100% - 200px);  
+    left: 100%;
+    margin-left: -125px;
+    position: fixed;
+    margin-top: 200px;
+}
+
+.page_count_text {
+    width: 100px;
+    font-family: 'Intro';
+    font-size: 18pt;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+    float:left;
+    transition: height .2s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .kidevelop {
