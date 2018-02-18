@@ -48,8 +48,8 @@ html, body {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    transition: .8s;
-    -webkit-transition:left .8s, top .8s, opacity .8s;
+    transition: .3s;
+    -webkit-transition:left .3s, top .3s, opacity .8s;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-transform: translate3d(0,0,0);
     -webkit-backface-visibility: hidden;
@@ -172,6 +172,13 @@ body::-webkit-scrollbar-thumb
     letter-spacing: -0.2;
 }
 
+.context {
+    font-family: 'Noto Sans KR';
+    font-size: 14pt;
+    color: #171717;
+    letter-spacing: -0.2px;
+}
+
 .scrolltitle {
     position: absolute;
     left: 50%;
@@ -179,6 +186,12 @@ body::-webkit-scrollbar-thumb
     margin-left: -51px;
     color: #d6d6d6;
     letter-spacing: 5;
+}
+
+.profile {
+    float:left;
+    margin-left: calc(50% - 244px);
+    margin-top: 50px;
 }
 
 .profile_image {
@@ -189,26 +202,22 @@ body::-webkit-scrollbar-thumb
     background-image: url(kidevelopio.png);
     background-position: center;
     background-size: cover;
-    margin-top: 50px;
-    margin-left: calc(25% - 75px);
     -webkit-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
     -moz-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
     box-shadow: 0px 11px 35px 1px rgba(0,0,0,0.11);
 }
 
-.ver_line {
-    float: left;
-    width: 2px;
-    height: 150px;
-    margin-left: calc(25% - 75px);
-    margin-top: 50px;
-    background-color: #d6d6d6;
-}
-
 .profile_content {
     float: left;
-    margin-top: 50px;
-    margin-left: 25px;
+    margin-left: 50px;
+    line-height: 24pt;
+}
+
+.profile_content > a > img {
+    width: 30px;
+    margin-right: 15px;
+    float:left;
+    margin-top: 10px;
 }
 
 @media  (max-width: 600px) {
