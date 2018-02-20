@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 
 @font-face {
    font-family: 'Noto Sans KR';
@@ -13,9 +14,9 @@
    font-family: 'Noto Sans KR Light';
    font-style: normal;
    font-weight: 100;
-   src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
-        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
-        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');
+   src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
+        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
+        url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
  }
  
  @font-face {
@@ -33,11 +34,17 @@
     src: url(font/Intro.ttf.woff) format('woff');
   }
 
+  
 html, body {
     margin: 0;
     padding: 0;
     cursor: none;
     overflow-x: hidden;
+    
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 .mousecursor {
@@ -72,22 +79,6 @@ html, body {
     -webkit-transform: translate3d(0,0,0);
     -webkit-backface-visibility: hidden;
     background-color: rgba(61,49,75,.7);
-}
-
-body::-webkit-scrollbar-track
-{
-	background-color: white;
-}
-
-body::-webkit-scrollbar
-{
-	width: 25px;
-	background-color: white;
-}
-
-body::-webkit-scrollbar-thumb
-{
-	background-color: #2f2f45;
 }
 
 .prograss {
@@ -218,6 +209,97 @@ body::-webkit-scrollbar-thumb
     margin-right: 15px;
     float:left;
     margin-top: 10px;
+}
+
+.cirpercent {
+    width: 130px;
+    height: 130px;
+    background:
+    linear-gradient(180deg, transparent 50%, #f16529 50%),
+    linear-gradient(180deg, #f16529 50%, transparent 50%);
+    border-radius: 100%;
+    float:left;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    -webkit-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11);
+    box-shadow: 0px 22px 75px 3px rgba(0,0,0,0.11)
+}
+
+.circle > img {
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+}
+
+.minicircle {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: relative;
+    top: -35px;
+    left: 70px;
+    -webkit-box-shadow: 0px 5px 50px 3px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 5px 50px 3px rgba(0,0,0,0.11);
+    box-shadow: 0px 5px 50px 3px rgba(0,0,0,0.11);
+    line-height:50px;
+    text-align: center;
+    font-family: 'Noto Sans KR Bold';
+    font-size: 18pt;
+    color: #171717;
+    letter-spacing: -0.2;
+}
+
+.skill {
+    float:left;
+    width: 450px;
+    height: 130px;
+    margin-left: 20px;
+    margin-top:50px;
+}
+
+.skill_box {
+    width: 300px;
+    float:left;
+    margin-left:20px;
+}
+
+.skill_name {
+    font-family: 'Noto Sans KR Bold';
+    font-size: 24pt;
+    color: #171717;
+    letter-spacing: -0.2;
+    float:left;
+    line-height: 20px;
+    width:100%;
+}
+
+.skill_date {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 12pt;
+    font-style: italic;
+    color: #b6b6b6;
+    letter-spacing: 3px;
+    float:left;
+    margin-top: 10px;
+    width:100%;
+}
+
+.skill_content {
+    font-family: 'Noto Sans KR';
+    font-size: 12pt;
+    color: #171717;
+    letter-spacing: -.8px;
+    float:left;
 }
 
 @media  (max-width: 600px) {
