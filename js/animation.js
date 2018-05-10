@@ -19,9 +19,9 @@ $( window ).scroll(function() {
     // } else if(scrollvalueper >= 34) {
     //     $('.page_count_text').text("3 —— 6");
     if(scrollvalueper >= 50) {
-        $('.page_count_text').text("2 —— 6");
+        $('.page_count_text').text("2 —— 2");
     } else {
-        $('.page_count_text').text("1 —— 6");
+        $('.page_count_text').text("1 —— 2");
     }
 
 });
