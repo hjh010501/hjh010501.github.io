@@ -7,7 +7,7 @@ $( window ).scroll(function() {
 
     
     scrollvalue = $window.scrollTop();
-    scrollvalueper = (scrollvalue / window_height * 20);
+    scrollvalueper = (scrollvalue / window_height * 100);
     $('.prograss').css("height", scrollvalueper + "%");
     $('.page_count_text').css("margin-top", scrollvalueper * (window_height - 400) * 0.01 + "px");
     // if(scrollvalueper >= 85) {
