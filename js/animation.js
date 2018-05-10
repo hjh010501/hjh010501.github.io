@@ -10,15 +10,15 @@ $( window ).scroll(function() {
     scrollvalueper = (scrollvalue / window_height * 20);
     $('.prograss').css("height", scrollvalueper + "%");
     $('.page_count_text').css("margin-top", scrollvalueper * (window_height - 400) * 0.01 + "px");
-    if(scrollvalueper >= 85) {
-        $('.page_count_text').text("6 —— 6");
-    } else if(scrollvalueper >= 68) {
-        $('.page_count_text').text("5 —— 6");
-    } else if(scrollvalueper >= 51) {
-        $('.page_count_text').text("4 —— 6");
-    } else if(scrollvalueper >= 34) {
-        $('.page_count_text').text("3 —— 6");
-    } else if(scrollvalueper >= 17) {
+    // if(scrollvalueper >= 85) {
+    //     $('.page_count_text').text("6 —— 6");
+    // } else if(scrollvalueper >= 68) {
+    //     $('.page_count_text').text("5 —— 6");
+    // } else if(scrollvalueper >= 51) {
+    //     $('.page_count_text').text("4 —— 6");
+    // } else if(scrollvalueper >= 34) {
+    //     $('.page_count_text').text("3 —— 6");
+    if(scrollvalueper >= 50) {
         $('.page_count_text').text("2 —— 6");
     } else {
         $('.page_count_text').text("1 —— 6");
