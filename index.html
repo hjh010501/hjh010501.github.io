@@ -1,0 +1,105 @@
+<html lang="ko">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9332903532195197"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="description" content="나이스(NEIS) 글자수 계산기">
+    <meta property="og:title" content="나이스(NEIS) 글자수 계산기">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hjh010501.github.io/neis-counter">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:description" content="나이스(NEIS) 글자수 계산기">
+    <meta property="og:image" content="ogimage.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>나이스(NEIS) 글자수 계산기</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145929593-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-145929593-1');
+    </script>
+
+    </head>
+    <body>
+        <div class="center">
+              <div class="title">🌊나이스(NEIS) 글자수 계산기</div>
+            <div class="title_underbar_wrapper">
+            <div class="title_underbar"></div>
+            </div>
+            <textarea id="counter" class="counter" cols="40" rows="5"></textarea>
+            <table>
+                    <tr>
+                        <th>항목</td>
+                        <th>자율활동</th>
+                        <th>동아리활동</th>
+                        <th>진로활동</th>
+                        <th>교과세특</th>
+                        <th>개인별세특</th>
+                    </tr>
+                    <tr>
+                        <td>바이트</td>
+                        <td>1500Bytes</td>
+                        <td>1500Bytes</td>
+                        <td>2100Bytes</td>
+                        <td>1500Bytes</td>
+                        <td>1500Bytes</td>
+                    </tr>
+            </table>
+            <div id="result" class="result">공백 제외 0자, 공백 포함 0자, 0바이트</div>
+            <span class="info">영어, 숫자, 특수문자, 띄어쓰기, 엔터키 1바이트 / 한글 3바이트<br>변경사항이 있다면 개발자 이메일로 연락주시면 감사하겠습니다.<br class="small-screen">반영해주신 분들: <a href="https://github.com/Dongyeongkim" target="_blank">김동영</a>, <a href="https://github.com/rycont" target="_blank">정한(Rycont)</a>, <a href="https://github.com/cokia" target="_blank">한우영</a>, <a href="https://github.com/hajin-chung" target="_blank">정하진</a>, <a href="https://github.com/bshyuunn" target="_blank">배송현</a>, <a href="https://github.com/mcgun1234" target="_blank">최수현</a>, <a href="https://github.com/b0u0b-0w0" target="_blank">김서진</a>, <a href="https://github.com/jjoonleo" target="_blank">박이준</a><br><br><a href="https://hjh010501.github.io/neis-counter/"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhjh010501.github.io%2Fneis-counter%2F&count_bg=%23000000&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=%EB%B0%A9%EB%AC%B8%EC%9E%90+%EC%88%98&edge_flat=true"/></a></span>
+        </div>
+        <div class="footbar">
+        <div class="footbar_content">
+            <span>👨‍💻 by <a href="https://github.com/hjh010501">kidevelop</a></span>
+            <span><a class="github-button" href="https://github.com/hjh010501/neis-counter" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star hjh010501/neis-counter on GitHub">Star</a></span>
+        </div>
+        </div>
+        <script>
+        const textarea = document.getElementById("counter");
+        
+        function init() {
+            let content = localStorage.getItem("save");
+
+            if(content) {
+                counter(content);
+                document.getElementById('counter').value = content;
+            }
+
+            textarea.addEventListener("input", function(e) {
+                counter(e.target.value);
+            });
+        }
+
+        function counter(content) {
+            if (content == "\n" && content.startsWith('\n')) {
+                content = content.slice(1);
+            }
+            if (content != "\n" && content.endsWith('\n')) {
+                content = content.slice(0, -1);
+            }
+
+            localStorage.setItem("save", content);
+            var english = content.replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/gi, "").replace(/[0-9]/gi, "").replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, "").replace(/\s/gi, "").replace(/\s/gi, "").replace(/(\r\n\t|\n|\r\t)/gm,"").replace(/‘|’|“|”/g, "");
+            var korean = content.replace(/[a-zA-Z]/gi, "").replace(/[0-9]/gi, "").replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, "").replace(/\s/gi, "").replace(/(\r\n\t|\n|\r\t)/gm,"").replace(/‘|’|“|”/g, "");
+            var number = content.replace(/[a-zA-Z]/gi, "").replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/gi, "").replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, "").replace(/\s/gi, "").replace(/(\r\n\t|\n|\r\t)/gm,"").replace(/‘|’|“|”/g, "");
+            var onebyte_special = content.replace(/[a-zA-Z]/gi, "").replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/gi, "").replace(/[0-9]/gi, "").replace(/\s/gi, "").replace(/(\r\n\t|\n|\r\t)/gm,"").replace(/‘|’|“|”/g, "");
+            var threebyte_special = content.replace(/[a-zA-Z]/gi, "").replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/gi, "").replace(/[0-9]/gi, "").replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, "").replace(/\s/gi, "").replace(/(\r\n\t|\n|\r\t)/gm,"");
+            var space =  content.replace(/[a-zA-Z]/gi, "").replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/gi, "").replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, "").replace(/[0-9]/gi, "").replace(/(\r\n\t|\n|\r\t)/gm,"").replace(/‘|’|“|”/g, "");
+            var line = content.replace(/[a-zA-Z]/gi, "").replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/gi, "").replace(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi, "").replace(/[0-9]/gi, "").replace(/ /gi, "").replace(/‘|’|“|”/g, "");
+            var result = english.length + (korean.length * 3) +  number.length + onebyte_special.length + (threebyte_special.length * 3) + space.length + line.length;
+            document.getElementById('result').innerHTML = "공백 제외 " + content.replace(/(\r\n\t|\n|\r\t)/gm,"").replace(/ /gi, "").length + "자, 공백 포함 " + content.length + "자, " + result + "바이트";
+        }    
+
+        window.onload = init;
+        </script>
+    </body>
+</html>
